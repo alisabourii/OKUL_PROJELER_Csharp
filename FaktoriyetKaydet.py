@@ -6,14 +6,26 @@ def fakto(deger):
 
 degerler = []
 counter = 0
+
 while 1:
     giris = int(input("Değer giriniz(Çıkış için 1): "))
     if giris == 1:
         break
     faktDeger = fakto(giris)
     degerler.append(str(counter)+":"+str(faktDeger)+"\n")
-    print("Sonuç: "+str(faktDeger))
     counter += 1
-file = open("faktSonuclar.txt","w+")
-file.writelines(degerler)
-print(degerler)
+    file = open("faktSonuclar.txt","w+")
+    file.writelines(degerler)
+    file.close()
+
+for _ in range(20):
+    print("-", end="-")
+print()
+
+fileOku = open("faktSonuclar.txt","r+")
+listeFile = fileOku.readlines()
+listStr = ""
+for i in listeFile:
+    listStr += i
+print(listStr)
+fileOku.close()
