@@ -24,6 +24,12 @@ while 1:
     
     file = open("islemKayitlari.txt","w+")
     Sonuclar.append("İşlem ="+str(sayi1)+operator+str(sayi2)+" Sonuç= "+str(islemSonuc)+" \n")
-    print(Sonuclar)
     file.writelines(Sonuclar)
     file.close()
+
+file = open("islemKayitlari.txt","r+")
+results = [i for i in file.readlines()]
+rsltStr = ""
+for i in results:
+    rsltStr += i
+print(rsltStr)
