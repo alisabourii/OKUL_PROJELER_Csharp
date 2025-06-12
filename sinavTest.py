@@ -22,11 +22,13 @@ while 1:
         islemSonuc = sayi1/sayi2
         print('Sonuç: '+ str(islemSonuc))
     
+    #Open & Write+
     file = open("islemKayitlari.txt","w+")
     Sonuclar.append("İşlem ="+str(sayi1)+operator+str(sayi2)+" Sonuç= "+str(islemSonuc)+" \n")
     file.writelines(Sonuclar)
     file.close()
 
+#Open & Read+
 file = open("islemKayitlari.txt","r+")
 results = [i for i in file.readlines()]
 rsltStr = ""
