@@ -1,0 +1,25 @@
+<form action="kaydet.php" method="post">
+  <label for="ad">Ad:</label>
+  <input type="text" id="ad" name="ad" required placeholder="Adınızı yazın"><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <label>Cinsiyet:</label>
+  <input type="radio" name="cinsiyet" value="erkek" checked> Erkek
+  <input type="radio" name="cinsiyet" value="kadin"> Kadın<br>
+
+  <label>Hobiler:</label>
+  <input type="checkbox" name="hobi1" value="müzik"> Müzik
+  <input type="checkbox" name="hobi2" value="spor"> Spor<br>
+
+  <label for="sehir">Şehir:</label>
+  <select name="sehir" id="sehir">
+    <option value="34">İstanbul</option>
+    <option value="35">İzmir</option>
+  </select>
+
+  <br><br>
+  <input type="submit" value="Gönder">
+  <input type="reset" value="Temizle">
+</form>
