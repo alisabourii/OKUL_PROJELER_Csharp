@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+               body{
+                background-color: rgb(4, 76, 117);
+               } 
+               form{
+                width: 600px;
+                height: 500px;
+                margin: 50px auto;
+                background-color:rgba(22, 129, 190, 0.671);
+                align-items: center;
+                text-align: center;
+               }
+
+               .btnClass{
+                width: 100px;
+                height: 30px;
+                background-color: rgb(4, 76, 117);
+                color: white;
+                border-radius: 5px;
+                border: none;
+               }
+               input[type="text"]:hover,
+               input[type="email"]:hover,
+                 textarea:hover,
+                 select:hover{
+                        background-color: rgba(253, 249, 4, 0.671);
+                 }
+
+          
+        </style>
+</head>
+<body>
+      <form action="">
+        <label for="">Ad&Soyad</label><br>
+        <input type="text" name="adsoyad" id="adsoyad" placeholder="Ad ve Soyadınızı Giriniz"><br>
+        
+        <label for="">E-posta</label><br>
+        <input type="email" name="email" id="email" placeholder="email Giriniz"><br>
+
+        <textarea name="mesaj" id="mesaj" cols="30" rows="10" placeholder="Adresiniz giriniz Giriniz"></textarea><br>
+
+        <label for="">Kitap türü</label><br>
+        <select>
+                <option id="kRoman">Roman</option>
+                <option id="kBilim" selected>Bilim</option>
+                <option id="kTarih">Tarih</option>
+                <option id="kCocuk">Çocuk Kitabı</option>
+        </select><br>
+
+        <label for="">Hediye paketi istiyor musunuz?</label>
+        <input type="checkbox" name="hediye" id="hediye" value="evet"><br>
+
+        <label for="">Teslimat Şekli</label>
+        <input type="radio" name="teslimat" id="kargo" value="kargo"><label for="kargo">Kargo</label>
+        <input type="radio" name="teslimat" id="elden" value="elden" checked><label for="elden">Elden Teslim</label><br>
+        <br>
+        <input type="submit" value="Gönder" id="gonder" name="gonder" class="btnClass">
+        <input type="reset" value="Temizle" id="temizle" name="temizle" class="btnClass" onclick="location.reload();">
+</form> 
+</body>
+</html>
