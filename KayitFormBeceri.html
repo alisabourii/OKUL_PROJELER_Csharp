@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                body{
+                        background-color: rgba(255, 255, 3, 0.753);
+                }
+                form{
+                        width: 300px;
+                        height: auto;
+                        margin: 0 auto;
+                        padding: 20px;
+                        border: 1px solid #ccc;
+                        border-radius: 10px;
+                        background-color: blue;
+                }
+               input[type="reset"]:hover {
+                        background-color: red;
+                        color: white;
+                }
+                input[type="submit"]:hover{
+                        background-color: rgb(10, 170, 58);
+                        color: white; 
+                }
+                input[type="submit"],
+                input[type="reset"]{
+                        width: 100px;
+                        height: 30px;
+                        background-color: rgb(4, 76, 117);
+                        color: white;
+                        border-radius: 5px;
+                        border: none;
+                        cursor: pointer;
+                        margin-left: 20px;
+                        margin-top: 15px;
+                }
+                h2{margin-left: 43%;}
+        </style>
+</head>
+<body>
+        <h2>Kayıt Formu</h4>
+        <form action="islem.php" method="post">
+                <label for="adSoyad">Ad Soyad:</label>
+                <input type="text" id="adSoyad" name="adSoyad" placeholder="Ad ve Soyadınızı Giriniz" required><br>
+                
+                <label for="epost">E-Posta:</label>
+                <input type="email" id="eposta" name="eposta" placeholder="E-Posta Adresinizi Giriniz" required><br>
+
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="Telefon Numaranızı Giriniz" required><br>
+
+                <label for="tarih">Tarih:</label>
+                <input type="date" id="tarih" name="tarih" required><br>
+
+                <label for="cinsiyet">Cinsiyet:</label><br>
+                <input type="radio" id="erkek" name="cinsiyet" value="erkek" >
+                <label for="erkek">Erkek</label>
+
+                <input type="radio" id="kadin" name="cinsiyet" value="kadin" >
+                <label for="kadin">Kadın</label>
+                
+                <input type="radio" id="CinsBM" name="cinsiyet" value="CinsBM" checked>
+                <label for="CinsBM">Belirtmek istemiyorum</label><br>
+
+                <label for="kursSev">Kurs Seviyesi</label>
+                <select id="kursSevSelect">
+                        <option value="baslangic" selected>Başlangıç</option>
+                        <option value="orta">Orta</option>
+                        <option value="ileri">İleri</option>
+                </select><br>
+
+                <label for="ilgiAlan">İlgi Alanları:</label><br>
+                <input type="checkbox" id="web" name="ilgiAlan[wen]" value="web" checked>
+                <label for="web">Web Geliştirme</label><br>
+                <input type="checkbox" id="mobil" name="ilgiAlan[mobil]" value="mobil">
+                <label for="mobil">Mobil Geliştirme</label><br>
+                <input type="checkbox" id="yapayZeka" name="ilgiAlan[AI]" value="yapayZeka">
+                <label for="yapayZeka">Yapay Zeka</label><br>
+                <input type="checkbox" id="Oyun" name="ilgiAlan[Oyun]" value="Oyun">
+                <label for="Oyun">Oyun</label><br>
+                <input type="checkbox" id="veriBilimi" name="ilgiAlan[veriBilimi]" value="veriBilimi">
+                <label for="veriBilimi">Veri Bilimi</label><br>
+
+
+                <label>Adress:</label><br>
+                <textarea name="adres" id="adres" cols="30" rows="6" placeholder="Adresinizi Giriniz"></textarea><br>
+
+                <label for="Resim">Resim Yükle:</label>
+                <input type="file" name="Resim" id="Resim" accept="image/*"><br>
+
+                <input type="submit" value="Gönder">
+                <input type="reset" value="Temizle" onclick="location.reload();"><br>
+        </form>
+
+
+        
+</body>
+</html>
